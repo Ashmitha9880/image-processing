@@ -21,3 +21,13 @@ plt.imshow(img)<br>
 
 ![image](https://user-images.githubusercontent.com/97940767/173811814-c62c4548-f8c3-422d-98a6-c83aee611109.png)
 
+3) develop a program to perform linear transformation rotation
+from PIL import Image<br>
+img=Image.open("plant1.jpg")<br>
+img=img.rotate(180)<br>
+img.show()<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+
+**OUTPUT**
+![image](https://user-images.githubusercontent.com/97940767/173813160-ccca0a77-63ad-4ebc-b46d-f2f4dd6f3487.png)
