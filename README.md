@@ -60,4 +60,33 @@ img.show())<br>
 **OUTPUT**
 ![image](https://user-images.githubusercontent.com/97940767/173814864-75f806a2-1fc0-4bb6-a8a8-93558b8810fe.png)
 
+6)develop a program to visualize the image using various color space
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+img=cv2.imread("butterfly1.jpg")
+plt.imshow(img)
+plt.show()
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+plt.imshow(img)
+plt.show()
+img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)
+plt.imshow(img)
+plt.show()
+**OUTPUT**
+
+![image](https://user-images.githubusercontent.com/97940767/173815223-fbee911c-47c8-4977-a058-6d41daf3c914.png)
+
+7)DISPLAY THE IMAGE ATTRIBUTES
+
+from PIL import Image
+image=Image.open("flower2.jpg")
+print("Filename:",image.filename)
+print("Format:",image.format)
+print("Mode:",image.mode)
+print("Size:",image.size)
+print("Width:",image.width)
+print("Height:",image.height)
+image.close()
+
 
