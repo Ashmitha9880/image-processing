@@ -33,3 +33,21 @@ cv2.destroyAllWindows()<br>
 
 
 ![image](https://user-images.githubusercontent.com/97940767/173813160-ccca0a77-63ad-4ebc-b46d-f2f4dd6f3487.png)
+
+4) DEVELOP PROGRAM TO CONVERT colorstring to RGB COLOR VALUES
+
+import cv2<br>
+from PIL import ImageColor<br>
+img1=ImageColor.getrgb("yellow")<br>
+print(img1)<br>
+img1=ImageColor.getrgb("red")<br>
+print(img1)<br>
+img1=ImageColor.getrgb("pink")<br>
+print(img1)<br>
+
+**OUTPUT**
+
+(255, 255, 0)
+(255, 0, 0)
+(255, 192, 203)
+
