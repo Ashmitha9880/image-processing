@@ -51,3 +51,13 @@ print(img1)<br>
 (255, 0, 0)
 (255, 192, 203)
 
+5)Write a program to create image using color
+
+from PIL import Image)<br>
+img=Image.new("RGB",(200,400),(255,255,0)))<br>
+img.show())<br>
+
+**OUTPUT**
+![image](https://user-images.githubusercontent.com/97940767/173814864-75f806a2-1fc0-4bb6-a8a8-93558b8810fe.png)
+
+
