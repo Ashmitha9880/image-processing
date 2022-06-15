@@ -10,7 +10,7 @@ cv2.destroyAllWindows()<br>
 
 ![image](https://user-images.githubusercontent.com/97940767/173810634-212154cc-7e46-4d7f-9bfe-edefafcdeb10.png)
 
-2)DEVELOP A PROGRAM TO DISPLAY THE IMAGES USING matplotlib
+2) DEVELOP A PROGRAM TO DISPLAY THE IMAGES USING matplotlib
 
 import matplotlib.image as mping<br>
 import matplotlib.pyplot as plt<br>
@@ -47,11 +47,11 @@ print(img1)<br>
 
 **OUTPUT**
 
-(255, 255, 0)
-(255, 0, 0)
-(255, 192, 203)
+(255, 255, 0)<br>
+(255, 0, 0)<br>
+(255, 192, 203)<br>
 
-5)Write a program to create image using color
+5)  Write a program to create image using color
 
 from PIL import Image)<br>
 img=Image.new("RGB",(200,400),(255,255,0)))<br>
@@ -60,7 +60,7 @@ img.show())<br>
 **OUTPUT**
 ![image](https://user-images.githubusercontent.com/97940767/173814864-75f806a2-1fc0-4bb6-a8a8-93558b8810fe.png)
 
-6)develop a program to visualize the image using various color space
+6) develop a program to visualize the image using various color space
 import cv2<br>
 import matplotlib.pyplot as plt<br>
 import numpy as np<br>
@@ -75,9 +75,10 @@ plt.imshow(img)<br>
 plt.show()<br>
 **OUTPUT**
 
+
 ![image](https://user-images.githubusercontent.com/97940767/173815223-fbee911c-47c8-4977-a058-6d41daf3c914.png)
 
-7)DISPLAY THE IMAGE ATTRIBUTES
+7) DISPLAY THE IMAGE ATTRIBUTES
 
 from PIL import Image<br>
 image=Image.open("flower2.jpg")<br>
