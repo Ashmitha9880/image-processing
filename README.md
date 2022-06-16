@@ -83,7 +83,7 @@ plt.show()<br>
 from PIL import Image<br>
 image=Image.open("flower2.jpg")<br>
 print("Filename:",image.filename)<br>
-print("Format:",image.format<br>)
+print("Format:",image.format)<br>
 print("Mode:",image.mode)<br>
 print("Size:",image.size)<br>
 print("Width:",image.width)<br>
@@ -94,5 +94,19 @@ image.close()<br>
 
 ![image](https://user-images.githubusercontent.com/97940767/173816249-af458bc1-284d-4501-9a79-76a7379d9827.png)
 
+8) CONVERT THE ORIGINAL IMAGE TO GRAY SCALE AND THEN BINARY
 
+import cv2<br><br>
+img=cv2.imread('flower3.jpg')<br>
+cv2.imshow("RGB",img)<br>
+cv2.waitKey(0)<br>
+#gray scale<br>
+img=cv2.imread ('flower3.jpg',0)<br>
+cv2.imshow("Gray",img)<br>
+cv2.waitKey(0)<br>
+#binary image<br>
+ret,bw_img=cv2.threshold (img,127,255,cv2.THRESH_BINARY)<br>
+cv2.imshow("Binary",bw_img)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
 
