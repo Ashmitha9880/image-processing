@@ -105,7 +105,7 @@ img=cv2.imread ('flower3.jpg',0)<br>
 cv2.imshow("Gray",img)<br>
 cv2.waitKey(0)<br>
 #binary image<br>
-ret,bw_img=cv2.threshold (img,127,255,cv2.THRESH_BINARY)<br>
+ret,bw_img=cv2.threshold (img,127,255,cv2.THRESH_BINAR<br>Y)<br>
 cv2.imshow("Binary",bw_img)<br>
 cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br>
@@ -115,6 +115,22 @@ cv2.destroyAllWindows()<br>
 ![image](https://user-images.githubusercontent.com/97940767/174045981-050582dd-c5e9-45d4-8744-2243618d2aaf.png)
 ![image](https://user-images.githubusercontent.com/97940767/174046144-88b37482-f474-4be1-a526-29e3da998016.png)
 ![image](https://user-images.githubusercontent.com/97940767/174046296-0fe3f818-5453-4d09-8ebd-f235c247bc35.png)
+
+9) RESIZE THE ORIGINAL IMAGES
+
+import cv2<br>
+img=cv2.imread('flower1.jpg')<br>
+print('original image length width',img.shape)<br>
+cv2.imshow('original image',img)<br>
+cv2.waitKey(0)<br>
+#to show the resized image<br>
+imgresize=cv2.resize(img,(150,160))<br>
+cv2.imshow('Resized image',imgresize)<br>
+print('resized image lenght width',imgresize.shape)<br>
+cv2.waitKey(0)<br>
+
+**OUTPUT**
+
 
 
 
