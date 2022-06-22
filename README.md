@@ -135,7 +135,19 @@ cv2.waitKey(0)<br>
 ![image](https://user-images.githubusercontent.com/97940767/174048151-a9493847-3382-4d88-9540-04fd81b7f472.png)<br>
 ![image](https://user-images.githubusercontent.com/97940767/174048317-81573d9e-2a9b-4b53-84a1-0325854557ac.png)<br>
 
+**
+Lab exercise:**
+1. Develop a program to readimage using URL.<br>
+from skimage import io<br>
+import matplotlib.pyplot as plt<br>
+url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0XJ2Kil6XedNVlxv9wMqE6dZJ7VF1DcFcow&usqp=CAU'<br>
+image=io.imread(url)<br>
+plt.imshow(image)<br>
+plt.show()<br>
 
+**OUTPUT**
+
+![image](https://user-images.githubusercontent.com/97940767/175004887-6c735fdd-6cbe-4e1e-9208-4f1b1e68423d.png)
 
 
 
