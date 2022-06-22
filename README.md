@@ -208,6 +208,41 @@ plt.show()<br>
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/97940767/175015589-71a69b0c-f27e-41aa-a2a6-89ba32dd3e3d.png)<br>
 
+**3. Write a program to perform arithmatic operations on images**
 
+import cv2
+import matplotlib.image as mping
+import matplotlib.pyplot as plt
+
+img1=cv2.imread('f1.jpg')
+img2=cv2.imread('f2.jpg')
+
+fimg1=img1+img2
+plt.imshow(fimg1)
+plt.show()
+
+cv2.imwrite('output.jpg',fimg1)
+fimg2=img1-img2
+plt.imshow(fimg2)
+plt.show()
+
+
+cv2.imwrite('output.jpg',fimg2)
+fimg3=img1*img2
+plt.imshow(fimg3)
+plt.show()
+
+cv2.imwrite('output.jpg',fimg3)
+fimg4=img1/img2
+plt.imshow(fimg4)
+plt.show()
+
+
+cv2.imwrite('output.jpg',fimg4)
+
+**OUTPUT**<br>
+
+![image](https://user-images.githubusercontent.com/97940767/175022012-4c02ec53-f7d6-4e6e-ab67-1b0350bac464.png)
+![image](https://user-images.githubusercontent.com/97940767/175022095-7c368bd0-d762-4154-a6d8-ab3ec92b7948.png)
 
 
