@@ -151,6 +151,63 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940767/175004887-6c735fdd-6cbe-4e1e-9208-4f1b1e68423d.png)
 
 
+**2. Write a program to mask and blur the image**
+
+import cv2<br>
+import matplotlib.image as mping<br>
+import matplotlib.pyplot as plt<br>
+img=cv2.imread('fish2.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+
+OUTPUT
+![image](https://user-images.githubusercontent.com/97940767/175014872-eab018f1-80bf-4fd8-b749-d7d1f391dcbe.png)<br>
+
+hsv_img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)<br>
+light_orange=(1,190,200)<br>
+dark_orange=(18,255,255)<br>
+mask=cv2.inRange(img,light_orange,dark_orange)<br>
+result=cv2.bitwise_and(img,img,mask=mask)<br>
+plt.subplot(1,2,1)<br>
+plt.imshow(mask,cmap="gray")<br>
+plt.subplot(1,2,2)<br>
+plt.imshow(result)<br>
+plt.show()<br>
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940767/175015021-62cf3b7f-fdec-411e-bcc0-f2e930f6393c.png)<br>
+
+light_white=(0,0,200)<br>
+dark_white=(145,60,255)<br><br>
+mask_white=cv2.inRange(hsv_img,light_white,dark_white)<br>
+result_white=cv2.bitwise_and(img,img,mask=mask_white)<br>
+plt.subplot(1,2,1)<br>
+plt.imshow(mask_white,cmap="gray")<br>
+plt.subplot(1,2,2)<br>
+plt.imshow(result_white)<br>
+plt.show()<br>
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940767/175015216-8c572cf1-2f25-460c-910f-237f28e122cd.png)<br>
+
+final_mask=mask+mask_white<br>
+final_result=cv2.bitwise_and(img,img,mask=final_mask)<br>
+plt.subplot(1,2,1)<br>
+plt.imshow(final_mask,cmap="gray")<br>
+plt.subplot(1,2,2)<br>
+plt.imshow(final_result)<br>
+plt.show()<br>
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940767/175015425-e0fc3440-e479-46c7-8fd5-01ef2c078749.png)<br>
+
+blur=cv2.GaussianBlur(final_result,(7,7),0)<br>
+plt.imshow(blur)<br>
+plt.show()<br>
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940767/175015589-71a69b0c-f27e-41aa-a2a6-89ba32dd3e3d.png)<br>
+
 
 
 
