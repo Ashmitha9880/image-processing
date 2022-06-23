@@ -210,39 +210,66 @@ plt.show()<br>
 
 **3. Write a program to perform arithmatic operations on images**
 
-import cv2
-import matplotlib.image as mping
-import matplotlib.pyplot as plt
+import cv2<br>
+import matplotlib.image as mping<br>
+import matplotlib.pyplot as plt<br>
 
-img1=cv2.imread('f1.jpg')
-img2=cv2.imread('f2.jpg')
+img1=cv2.imread('f1.jpg')<br>
+img2=cv2.imread('f2.jpg')<br>
 
-fimg1=img1+img2
-plt.imshow(fimg1)
-plt.show()
+fimg1=img1+img2<br>
+plt.imshow(fimg1)<br>
+plt.show()<br>
 
-cv2.imwrite('output.jpg',fimg1)
-fimg2=img1-img2
-plt.imshow(fimg2)
-plt.show()
-
-
-cv2.imwrite('output.jpg',fimg2)
-fimg3=img1*img2
-plt.imshow(fimg3)
-plt.show()
-
-cv2.imwrite('output.jpg',fimg3)
-fimg4=img1/img2
-plt.imshow(fimg4)
-plt.show()
+cv2.imwrite('output.jpg',fimg1)<br>
+fimg2=img1-img2<br>
+plt.imshow(fimg2)<br>
+plt.show()<br>
 
 
-cv2.imwrite('output.jpg',fimg4)
+cv2.imwrite('output.jpg',fimg2)<br>
+fimg3=img1*img2<br>
+plt.imshow(fimg3)<br>
+plt.show()<br>
+
+cv2.imwrite('output.jpg',fimg3)<br>
+fimg4=img1/img2<br>
+plt.imshow(fimg4)<br>
+plt.show()<br>
+
+
+cv2.imwrite('output.jpg',fimg4)<br><br>
 
 **OUTPUT**<br>
 
-![image](https://user-images.githubusercontent.com/97940767/175022012-4c02ec53-f7d6-4e6e-ab67-1b0350bac464.png)
-![image](https://user-images.githubusercontent.com/97940767/175022095-7c368bd0-d762-4154-a6d8-ab3ec92b7948.png)
+![image](https://user-images.githubusercontent.com/97940767/175022012-4c02ec53-f7d6-4e6e-ab67-1b0350bac464.png)<br>
+![image](https://user-images.githubusercontent.com/97940767/175022095-7c368bd0-d762-4154-a6d8-ab3ec92b7948.png)<br>
+
+4.  Develop the program to change the image to different color spaces<br>
+
+import cv2<br>
+img=cv2.imread ('E:\\f1.jpg')<br>
+gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)<br>
+hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)<br>
+lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB)<br>
+hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)<br>
+yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)<br>
+cv2.imshow("GRAY image",gray)<br>
+cv2.imshow("HSV image",hsv)<br>
+cv2.imshow("LAB image",lab)<br>
+cv2.imshow("HLS image",hls)<br>
+cv2.imshow("YUV image",yuv)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+
+**OUTPUT**<br>
+
+![image](https://user-images.githubusercontent.com/97940767/175273467-13f59c7f-ce21-470c-abad-a8d9cac0bc40.png)
+![image](https://user-images.githubusercontent.com/97940767/175273544-aed46d3e-e9af-4c68-a675-069b5f7ff5c3.png)
+![image](https://user-images.githubusercontent.com/97940767/175273678-7fd79d49-679d-44d9-9c80-675f407e7d59.png)
+![image](https://user-images.githubusercontent.com/97940767/175273887-e2526e1f-bf37-43c9-baf4-8870db0ea739.png)
+![image](https://user-images.githubusercontent.com/97940767/175273973-07ada23c-e35d-46d6-88ab-b3f5ffa6031e.png)
+
+
 
 
