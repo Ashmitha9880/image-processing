@@ -245,8 +245,8 @@ cv2.imwrite('output.jpg',fimg4)<br><br>
 ![image](https://user-images.githubusercontent.com/97940767/175022012-4c02ec53-f7d6-4e6e-ab67-1b0350bac464.png)<br>
 ![image](https://user-images.githubusercontent.com/97940767/175022095-7c368bd0-d762-4154-a6d8-ab3ec92b7948.png)<br>
 
-4.  Develop the program to change the image to different color spaces<br>
-
+**4.  Develop the program to change the image to different color spaces<br>
+**
 import cv2<br>
 img=cv2.imread ('E:\\f1.jpg')<br>
 gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)<br>
