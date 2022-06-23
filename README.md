@@ -270,12 +270,11 @@ cv2.destroyAllWindows()<br>
 ![image](https://user-images.githubusercontent.com/97940767/175273887-e2526e1f-bf37-43c9-baf4-8870db0ea739.png)
 ![image](https://user-images.githubusercontent.com/97940767/175273973-07ada23c-e35d-46d6-88ab-b3f5ffa6031e.png)
 
-
-5 program to create an array using 2d array
+5.create an image using 2d array
 
 import cv2 as c<br>
 import numpy  as np<br>
-from PIL import Image<br>
+from PIL import Image
 array = np.zeros([100,200,3],dtype=np.uint8)<br>
 array[:,:100]=[255,130,0]<br>
 array[:,100:]=[0,0,255]<br>
@@ -286,5 +285,6 @@ c.waitKey(0)<br>
 
 **OUTPUT**<br>
 
-![image](https://user-images.githubusercontent.com/97940767/175280905-2d59a26f-c39a-4fd1-8a14-8776a7e65031.png)<br>
+![image](https://user-images.githubusercontent.com/97940767/175285630-3320a3f6-671c-40d8-be9a-e1709e265c06.png)
+
 
