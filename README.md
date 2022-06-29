@@ -368,10 +368,10 @@ cv2.destroyAllWindows()<br>
 
 **OUTPUT**<br>
 
-![image](https://user-images.githubusercontent.com/97940767/176416846-cde01b15-bce7-4396-beca-86bdeab06a8b.png)<br>
-![image](https://user-images.githubusercontent.com/97940767/176416923-277b433f-df53-4296-aa37-6d8417f239d3.png)<br>
-![image](https://user-images.githubusercontent.com/97940767/176417112-8ae2d8c9-08d1-4616-b161-949b1336e6bf.png)<br>
-![image](https://user-images.githubusercontent.com/97940767/176417184-2aee9593-8c26-419c-9c26-8c5882e962d8.png)<br>
+![image](https://user-images.githubusercontent.com/97940767/176425171-1196156a-09e6-4db8-a01d-aa5ee13a58a4.png)<br>
+![image](https://user-images.githubusercontent.com/97940767/176425214-38d5224a-b05d-429e-892e-4178fef35439.png)<br>
+![image](https://user-images.githubusercontent.com/97940767/176425274-6d5cca91-fbd3-4045-9864-e0bbb159be21.png)<br>
+![image](https://user-images.githubusercontent.com/97940767/176425325-ea476067-cfe1-4bc6-a992-13c5e65feb71.png)<br>
 
 
 **8.develop image using enhacement**
