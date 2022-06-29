@@ -374,11 +374,40 @@ cv2.destroyAllWindows()<br>
 ![image](https://user-images.githubusercontent.com/97940767/176417184-2aee9593-8c26-419c-9c26-8c5882e962d8.png)<br>
 
 
+**8.develop image using enhacement**
 
+from PIL import Image<br>
+from PIL import ImageEnhance<br>
+image=Image.open('a2.jpg')<br>
+image.show()<br>
+<br>
+enh_bri=ImageEnhance.Brightness(image)<br>
+brightness=1.5<br>
+image_brightened=enh_bri.enhance(brightness)<br>
+image_brightened.show()<br>
 
+enh_col=ImageEnhance.Color(image)<br>
+color=1.5<br>
+image_colored=enh_col.enhance(color)<br>
+image_colored.show()<br>
 
+enh_con=ImageEnhance.Contrast(image)<br>
+contrast=1.5<br>
+image_contrasted=enh_con.enhance(contrast)<br>
+image_contrasted.show()<br>
 
+enh_sha=ImageEnhance.Sharpness(image)<br>
+sharpness=1.5<br>
+image_Sharped=enh_con.enhance(sharpness)<br>
+image_Sharped.show()<br>
 
+**OUTPUT**<br>
+
+![image](https://user-images.githubusercontent.com/97940767/176423684-f670bc1b-d791-40a7-9702-9791b86fc177.png)
+![image](https://user-images.githubusercontent.com/97940767/176423944-d8e1cc4c-74f1-4bde-b321-4f18cdfdb94e.png)
+![image](https://user-images.githubusercontent.com/97940767/176424023-7f2d6c78-c3f9-4efe-9799-fb5ce37b23e2.png)
+![image](https://user-images.githubusercontent.com/97940767/176424059-62f1282b-a76e-4293-8261-5a69d4ac5be8.png)
+![image](https://user-images.githubusercontent.com/97940767/176424101-149ea877-13c1-4728-b9c8-f52d55c9e9f5.png)
 
 
 
