@@ -440,9 +440,9 @@ cv2.waitKey(0)<br>
 
 ![image](https://user-images.githubusercontent.com/97940767/176427092-f4b3d9f4-065c-4f5b-911c-f72c78b062da.png)<br>
 
-10) develop a program to !) read an image
+**10) develop a program to !) read an image
                          !!)write (save) the grayscale image
-                         !!!) Display the original image and grayscale image
+                         !!!) Display the original image and grayscale image**
                          
 import cv2<br>
 OriginalImag=cv2.imread('r1.jpg')<br>
@@ -459,6 +459,29 @@ if isSaved:<br>
 
 ![image](https://user-images.githubusercontent.com/97940767/178700926-c1c0d145-3d19-4bbc-8802-b7efe0c23811.png)<br> 
 ![image](https://user-images.githubusercontent.com/97940767/178700983-2981daa7-2d44-4c3c-a30f-e5c5300edc2f.png)<br> 
-![image](https://user-images.githubusercontent.com/97940767/178705689-7bb3f0cc-79f2-4453-b9ea-fa8e8540ae13.png)
+![image](https://user-images.githubusercontent.com/97940767/178705689-7bb3f0cc-79f2-4453-b9ea-fa8e8540ae13.png)<br> 
 
 
+**11) slicing with background.jpg**<br>
+
+import cv2<br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+image=cv2.imread('r1.jpg',0)<br>
+x,y=image.shape<br>
+z=np.zeros((x,y))<br>
+for i in range(0,x):<br>
+    for j in range(0,y):<br>
+        if (image[i][j]>50and image[i][j]<150):<br>
+            z[i][j]=255<br>
+        else: <br>
+            z[i][j]=image[i][j]<br>
+equ=np.hstack((image,z)) <br> <br>   
+plt.title('gray level slicing with background')<br>
+plt.imshow(equ,'gray')<br>
+plt.show()<br>
+            
+**OUTPUT**<br>
+
+
+![image](https://user-images.githubusercontent.com/97940767/178707065-bba54fc6-02ea-4e86-bf0e-1c25ac1fe53b.png)<br>
