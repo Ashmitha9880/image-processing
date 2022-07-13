@@ -410,7 +410,7 @@ image_Sharped.show()<br>
 ![image](https://user-images.githubusercontent.com/97940767/176424101-149ea877-13c1-4728-b9c8-f52d55c9e9f5.png)
 
 
-9)
+9)MORPHOLOGICAL OPERATIONS
 
 import cv2
 import numpy as np
