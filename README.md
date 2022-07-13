@@ -485,3 +485,30 @@ plt.show()<br>
 
 
 ![image](https://user-images.githubusercontent.com/97940767/178707065-bba54fc6-02ea-4e86-bf0e-1c25ac1fe53b.png)<br>
+
+**12) slicing without background.jpg**<br>
+
+import cv2
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+image=cv2.imread('r1.jpg',0)<br>
+x,y=image.shape<br>
+z=np.zeros((x,y))<br>
+for i in range(0,x):<br>
+    for j in range(0,y):<br>
+        if (image[i][j]>50and image[i][j]<150):<br>
+            z[i][j]=255<br>
+        else: 
+            z[i][j]=0<br>
+equ=np.hstack((image,z)) <br>     
+plt.title('gray level slicing without background')<br>
+plt.imshow(equ,'gray')<br>
+plt.show()<br>
+
+**OUTPUT**<br>
+
+![image](https://user-images.githubusercontent.com/97940767/178708416-2124ab67-4013-4510-8b1a-72283ea898fb.png)<br>
+
+
+
+            
