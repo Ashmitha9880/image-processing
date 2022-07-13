@@ -403,41 +403,41 @@ image_Sharped.show()<br>
 
 **OUTPUT**<br>
 
-![image](https://user-images.githubusercontent.com/97940767/176423684-f670bc1b-d791-40a7-9702-9791b86fc177.png)
-![image](https://user-images.githubusercontent.com/97940767/176423944-d8e1cc4c-74f1-4bde-b321-4f18cdfdb94e.png)
-![image](https://user-images.githubusercontent.com/97940767/176424023-7f2d6c78-c3f9-4efe-9799-fb5ce37b23e2.png)
-![image](https://user-images.githubusercontent.com/97940767/176424059-62f1282b-a76e-4293-8261-5a69d4ac5be8.png)
-![image](https://user-images.githubusercontent.com/97940767/176424101-149ea877-13c1-4728-b9c8-f52d55c9e9f5.png)
+![image](https://user-images.githubusercontent.com/97940767/176423684-f670bc1b-d791-40a7-9702-9791b86fc177.png)<br>
+![image](https://user-images.githubusercontent.com/97940767/176423944-d8e1cc4c-74f1-4bde-b321-4f18cdfdb94e.png)<br>
+![image](https://user-images.githubusercontent.com/97940767/176424023-7f2d6c78-c3f9-4efe-9799-fb5ce37b23e2.png)<br>
+![image](https://user-images.githubusercontent.com/97940767/176424059-62f1282b-a76e-4293-8261-5a69d4ac5be8.png)<br>
+![image](https://user-images.githubusercontent.com/97940767/176424101-149ea877-13c1-4728-b9c8-f52d55c9e9f5.png)<br>
+<br>
 
+9)MORPHOLOGICAL OPERATIONS<br>
 
-9)MORPHOLOGICAL OPERATIONS
-
-import cv2
+import cv2<br>
 import numpy as np
-from matplotlib import pyplot as plt
-from PIL import Image,ImageEnhance
-img=cv2.imread('b2.jpg',0)
-ax=plt.subplots(figsize=(20,10))
-kernel=np.ones((5,5),np.uint8)
-opening=cv2.morphologyEx(img,cv2.MORPH_OPEN,kernel)
-closing=cv2.morphologyEx(img,cv2.MORPH_CLOSE,kernel)
-erosion=cv2.erode(img,kernel,iterations=1)
-dilation=cv2.dilate(img,kernel,iterations=1)
-gradient=cv2.morphologyEx(img,cv2.MORPH_GRADIENT,kernel)
-plt.subplot(151)
-plt.imshow(opening)
-plt.subplot(152)
-plt.imshow(closing)
-plt.subplot(153)
-plt.imshow(erosion)
-plt.subplot(154)
-plt.imshow(dilation)
-plt.subplot(155)
-plt.imshow(gradient)
-cv2.waitKey(0)
+from matplotlib import pyplot as plt<br>
+from PIL import Image,ImageEnhance<br>
+img=cv2.imread('b2.jpg',0)<br>
+ax=plt.subplots(figsize=(20,10))<br>
+kernel=np.ones((5,5),np.uint8)<br>
+opening=cv2.morphologyEx(img,cv2.MORPH_OPEN,kernel)<br>
+closing=cv2.morphologyEx(img,cv2.MORPH_CLOSE,kernel)<br>
+erosion=cv2.erode(img,kernel,iterations=1)<br>
+dilation=cv2.dilate(img,kernel,iterations=1)<br>
+gradient=cv2.morphologyEx(img,cv2.MORPH_GRADIENT,kernel)<br>
+plt.subplot(151)<br>
+plt.imshow(opening)<br>
+plt.subplot(152)<br>
+plt.imshow(closing)<br>
+plt.subplot(153)<br>
+plt.imshow(erosion)<br>
+plt.subplot(154)<br>
+plt.imshow(dilation)<br>
+plt.subplot(155)<br>
+plt.imshow(gradient)<br>
+cv2.waitKey(0)<br>
 
 **OUTPUT**<br>
 
-![image](https://user-images.githubusercontent.com/97940767/176427092-f4b3d9f4-065c-4f5b-911c-f72c78b062da.png)
+![image](https://user-images.githubusercontent.com/97940767/176427092-f4b3d9f4-065c-4f5b-911c-f72c78b062da.png)<br>
 
 
