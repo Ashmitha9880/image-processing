@@ -513,4 +513,47 @@ plt.show()<br>
 
 22) ANALYSE THE IMAGE DATA USING HISTOGRAM
 
-            
+import numpy as np<br>
+import cv2 as cv<br>
+from matplotlib import pyplot as plt<br>
+img = cv.imread('r1.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+img = cv.imread('r1.jpg',0)<br>
+plt.hist(img.ravel(),256,[0,256]);<br>
+plt.show()<br> 
+
+**OUTPUT**<br>
+
+![image](https://user-images.githubusercontent.com/97940767/178960607-d9ad5d84-396b-4161-b6e4-fb471db5499d.png)
+
+from skimage import io<br> 
+import matplotlib.pyplot as plt<br> 
+img = io.imread('r1.jpg')<br> 
+plt.imshow(img)<br> 
+plt.show()<br> 
+image = io.imread('r1.jpg')<br> 
+ax = plt.hist(image.ravel(), bins = 256)<br> 
+plt.show()<br> 
+
+**OUTPUT**<br>
+
+![image](https://user-images.githubusercontent.com/97940767/178960943-c23111ab-1eaf-4184-984d-eabf9e7f335e.png)
+
+from skimage import io<br>
+import matplotlib.pyplot as plt<br>
+image = io.imread('r1.jpg')<br>
+
+_ = plt.hist(image.ravel(), bins = 256, color = 'orange', )<br>
+_ = plt.hist(image[:, :, 0].ravel(), bins = 256, color = 'red', alpha = 0.5)<br>
+_ = plt.hist(image[:, :, 1].ravel(), bins = 256, color = 'Green', alpha = 0.5)<br>
+_ = plt.hist(image[:, :, 2].ravel(), bins = 256, color = 'Blue', alpha = 0.5)<br>
+_ = plt.xlabel('Intensity Value')<br>
+_ = plt.ylabel('Count')<br>
+_ = plt.legend(['Total', 'Red_Channel', 'Green_Channel', 'Blue_Channel'])<br>
+plt.show()<br>
+
+**OUTPUT**<br>
+
+![image](https://user-images.githubusercontent.com/97940767/178961163-c842fd70-c768-400d-8641-e3316aa990e9.png)
+
