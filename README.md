@@ -138,7 +138,7 @@ cv2.waitKey(0)<br>
 
 **Lab exercise:**
 
-1. Develop a program to readimage using URL.<br>
+10. Develop a program to readimage using URL.<br>
 from skimage import io<br>
 import matplotlib.pyplot as plt<br>
 url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0XJ2Kil6XedNVlxv9wMqE6dZJ7VF1DcFcow&usqp=CAU'<br>
@@ -151,7 +151,7 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940767/175004887-6c735fdd-6cbe-4e1e-9208-4f1b1e68423d.png)
 
 
-**2. Write a program to mask and blur the image**
+**11. Write a program to mask and blur the image**
 
 import cv2<br>
 import matplotlib.image as mping<br>
@@ -208,7 +208,7 @@ plt.show()<br>
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/97940767/175015589-71a69b0c-f27e-41aa-a2a6-89ba32dd3e3d.png)<br>
 
-**3. Write a program to perform arithmatic operations on images**
+**12. Write a program to perform arithmatic operations on images**
 
 import cv2<br>
 import matplotlib.image as mping<br>
@@ -245,7 +245,7 @@ cv2.imwrite('output.jpg',fimg4)<br><br>
 ![image](https://user-images.githubusercontent.com/97940767/175022012-4c02ec53-f7d6-4e6e-ab67-1b0350bac464.png)<br>
 ![image](https://user-images.githubusercontent.com/97940767/175022095-7c368bd0-d762-4154-a6d8-ab3ec92b7948.png)<br>
 
-**4.  Develop the program to change the image to different color spaces<br>
+**13.  Develop the program to change the image to different color spaces<br>
 **
 import cv2<br>
 img=cv2.imread ('E:\\f1.jpg')<br>
@@ -270,7 +270,7 @@ cv2.destroyAllWindows()<br>
 ![image](https://user-images.githubusercontent.com/97940767/175273887-e2526e1f-bf37-43c9-baf4-8870db0ea739.png)
 ![image](https://user-images.githubusercontent.com/97940767/175273973-07ada23c-e35d-46d6-88ab-b3f5ffa6031e.png)
 
-5.create an image using 2d array
+14.create an image using 2d array
 
 import cv2 as c<br>
 import numpy  as np<br>
@@ -287,7 +287,7 @@ c.waitKey(0)<br>
 
 ![image](https://user-images.githubusercontent.com/97940767/175285630-3320a3f6-671c-40d8-be9a-e1709e265c06.png)
 
-**6.develop image using bitwise operations**<br>
+**15.develop image using bitwise operations**<br>
 import cv2<br>
 import matplotlib.pyplot as plt<br>
 image1=cv2.imread('b2.jpg',1)<br>
@@ -340,7 +340,7 @@ cv2.waitKey(0)<br>
 
 ![image](https://user-images.githubusercontent.com/97940767/176406746-fe22eb09-f71e-430e-922d-b95861898d01.png)
 
-**7.develop image using blurring**
+**16.develop image using blurring**
 
 import cv2<br>
 import numpy as np<br>
@@ -374,7 +374,7 @@ cv2.destroyAllWindows()<br>
 ![image](https://user-images.githubusercontent.com/97940767/176425325-ea476067-cfe1-4bc6-a992-13c5e65feb71.png)<br>
 
 
-**8.develop image using enhacement**
+**17.develop image using enhacement**
 
 from PIL import Image<br>
 from PIL import ImageEnhance<br>
@@ -410,7 +410,7 @@ image_Sharped.show()<br>
 ![image](https://user-images.githubusercontent.com/97940767/176424101-149ea877-13c1-4728-b9c8-f52d55c9e9f5.png)<br>
 <br>
 
-9)MORPHOLOGICAL OPERATIONS<br>
+18)MORPHOLOGICAL OPERATIONS<br>
 
 import cv2<br>
 import numpy as np
@@ -440,7 +440,7 @@ cv2.waitKey(0)<br>
 
 ![image](https://user-images.githubusercontent.com/97940767/176427092-f4b3d9f4-065c-4f5b-911c-f72c78b062da.png)<br>
 
-**10) develop a program to !) read an image
+**19) develop a program to !) read an image
                          !!)write (save) the grayscale image
                          !!!) Display the original image and grayscale image**
                          
@@ -464,7 +464,7 @@ if isSaved:<br>
 
 
 
-**11) slicing with background.jpg**<br>
+**20) slicing with background.jpg**<br>
 
 import cv2<br>
 import numpy as np<br>
@@ -488,7 +488,7 @@ plt.show()<br>
 
 ![image](https://user-images.githubusercontent.com/97940767/178707065-bba54fc6-02ea-4e86-bf0e-1c25ac1fe53b.png)<br>
 
-**12) slicing without background.jpg**<br>
+21) slicing without background.jpg**<br>
 
 import cv2
 import numpy as np<br>
@@ -511,6 +511,6 @@ plt.show()<br>
 
 ![image](https://user-images.githubusercontent.com/97940767/178708416-2124ab67-4013-4510-8b1a-72283ea898fb.png)<br>
 
-
+22) ANALYSE THE IMAGE DATA USING HISTOGRAM
 
             
