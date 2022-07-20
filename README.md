@@ -555,7 +555,7 @@ plt.show()<br>
 
 **OUTPUT**<br>
 
-![image](https://user-images.githubusercontent.com/97940767/178961163-c842fd70-c768-400d-8641-e3316aa990e9.png)
+![image](https://user-images.githubusercontent.com/97940767/178961163-c842fd70-c768-400d-8641-e3316aa990e9.png)<br><br>
 
 from matplotlib import pyplot as plt<br>
 import numpy as np<br>
@@ -570,4 +570,63 @@ plt.show()<br>
 
 **OUTPUT**<br>
 
-![image](https://user-images.githubusercontent.com/97940767/178961828-fa93db8f-63ff-4f2d-9e59-4c9e98df6bd0.png)
+![image](https://user-images.githubusercontent.com/97940767/178961828-fa93db8f-63ff-4f2d-9e59-4c9e98df6bd0.png)<br>
+
+23) Program to perform basic image data analysis using intensity transformation<br>
+ a)image negative<br>
+ b)log transformation<br>
+ c)gamma correction<br>
+ 
+ %matplotlib inline<br>
+import imageio<br>
+import matplotlib.pyplot as plt<br>
+import warnings<br>
+import matplotlib.cbook<br>
+warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)<br>
+pic=imageio.imread('r1.jpg')<br>
+plt.figure(figsize=(6,6))<br>
+plt.imshow(pic);<br>
+plt.axis('off');<br>
+
+![image](https://user-images.githubusercontent.com/97940767/179962602-b4666fc8-5475-4734-b079-af27d9f77f78.png)<br>
+
+
+negative=255-pic<br>
+plt.figure(figsize=(6,6))<br>
+plt.imshow(negative);<br>
+plt.axis('off');<br>
+<br>
+![image](https://user-images.githubusercontent.com/97940767/179962726-672f57ac-52f7-4e59-a516-eee025150d8d.png)<br>
+
+%matplotlib inline<br>
+import imageio<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+pic=imageio.imread('r1.jpg')<br>
+gray=lambda rgb:np.dot(rgb[...,:3],[0.299,0.587,0.114])<br>
+gray=gray(pic)<br>
+
+max_=np.max(gray)<br>
+
+def log_transform():<br>
+    return(255/np.log(1+max_))*np.log(1+gray)<br>
+plt.figure(figsize=(5,5))<br>
+plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray'))<br>
+plt.axis('off');<br>
+
+![image](https://user-images.githubusercontent.com/97940767/179962999-f631a48a-c142-4c44-9ac3-ea83756d4ea7.png)<br>
+
+
+import imageio<br>
+import matplotlib.pyplot as plt<br>
+pic=imageio.imread('r1.jpg')<br>
+gamma=2.2<br>
+gamma_correction=((pic/255)**(1/gamma))<br>
+plt.figure(figsize=(5,5))<br>
+plt.imshow(gamma_correction)<br>
+plt.axis('off');<br>
+
+![image](https://user-images.githubusercontent.com/97940767/179963155-07040a76-7b55-40b3-a1c1-c8d7d1dc8005.png)<br>
+
+
+
