@@ -679,10 +679,25 @@ plt.show()<br>
 
 
 
+from PIL import Image<br>
+import numpy as np<br>
+w, h = 600, 600<br>
+data = np.zeros((h, w, 3), dtype=np.uint8)<br>
+data[0:100, 0:100] = [255, 0, 0]<br>
+data[100:200, 100:200] = [255, 0, 255]<br>
+data[200:300, 200:300] = [0, 255, 0]<br>
+data[300:400, 300:400] = [130, 255, 0]<br>
+data[400:500, 400:500] = [0, 255, 170]<br>
+data[500:600, 500:600] = [180, 255, 0]<br>
+# red patch in upper left<br>
+img = Image.fromarray(data, 'RGB')<br>
+img.save('my.png')<br>
+plt.imshow(img)<br>
+plt.show()<br>
 
+OUTPUT<br>
 
-
-
+![image](https://user-images.githubusercontent.com/97940767/180202141-ddc10a60-8b2e-4025-b917-73329b649a86.png)<br>
 
 
 
