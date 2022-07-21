@@ -689,7 +689,7 @@ data[200:300, 200:300] = [0, 255, 0]<br>
 data[300:400, 300:400] = [130, 255, 0]<br>
 data[400:500, 400:500] = [0, 255, 170]<br>
 data[500:600, 500:600] = [180, 255, 0]<br>
-# red patch in upper left<br>
+#red patch in upper left<br>
 img = Image.fromarray(data, 'RGB')<br>
 img.save('my.png')<br>
 plt.imshow(img)<br>
