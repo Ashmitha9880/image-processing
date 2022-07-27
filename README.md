@@ -730,3 +730,68 @@ OUTPUT<br>
 ![image](https://user-images.githubusercontent.com/97940767/180202631-3e092d68-f590-4a94-b16c-68a3ab0c76f4.png)<br>
 
 
+1)maximum
+
+
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+img=cv2.imread('r1.jpg' )
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+plt.imshow(img)
+plt.show()
+max_channels = np.amax([np.amax(img[:,:,0]), np.amax(img[:,:,1]),np.amax(img[:,:,2])])
+
+print(max_channels)
+
+output
+
+![image](https://user-images.githubusercontent.com/97940767/181231478-d351b176-cb25-4cb3-b052-5fc9828a0e48.png)
+
+
+MINIMUM
+
+import imageio
+import numpy as np
+import matplotlib.pyplot as plt
+img=imageio.imread('r1.jpg' )
+plt.imshow(img)
+plt.show()
+min_channels = np.amin([np.min(img[:,:,0]), np.amin(img[:,:,1]),np.amin(img[:,:,2])])
+
+print(min_channels)
+
+OUTPUT
+
+![image](https://user-images.githubusercontent.com/97940767/181231660-a69f6a51-6908-40f5-8651-a42868888ce6.png)
+
+
+AVERAGE
+
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+img=cv2.imread('r1.jpg')
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+plt.imshow(img)
+np.average(img)
+
+OUTPUT
+
+![image](https://user-images.githubusercontent.com/97940767/181231889-c4c7c404-9673-4271-84c4-8256928a51f1.png)
+
+STANDARD DEVIATION
+
+from PIL import Image,ImageStat
+import matplotlib.pyplot as plt
+im=Image.open('r1.jpg')
+plt.imshow(im)
+plt.show()
+stat=ImageStat.Stat(im)
+print(stat.stddev)
+
+OUTPUT
+
+![image](https://user-images.githubusercontent.com/97940767/181232364-41def64b-1342-4a4e-83c9-ab5ff7142eb9.png)
+
+
