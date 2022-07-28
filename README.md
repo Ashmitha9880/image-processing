@@ -795,3 +795,99 @@ OUTPUT
 ![image](https://user-images.githubusercontent.com/97940767/181232364-41def64b-1342-4a4e-83c9-ab5ff7142eb9.png)
 
 
+
+# Python3 program for printing
+# the rectangular pattern
+ 
+# Function to print the pattern
+def printPattern(n):
+ 
+    arraySize = n * 2 - 1;
+    result = [[0 for x in range(arraySize)]
+                 for y in range(arraySize)];
+         
+    # Fill the values
+    for i in range(arraySize):
+        for j in range(arraySize):
+            if(abs(i - (arraySize // 2)) >
+               abs(j - (arraySize // 2))):
+                result[i][j] = abs(i - (arraySize // 2));
+            else:
+                result[i][j] = abs(j - (arraySize // 2));
+             
+    # Print the array
+    for i in range(arraySize):
+        for j in range(arraySize):
+            print(result[i][j], end = " ");
+        print("");
+ 
+# Driver Code
+n = 4;
+ 
+printPattern(n);
+
+
+OUTPUT
+
+![image](https://user-images.githubusercontent.com/97940767/181450782-bf66735d-3647-4541-96bd-c961391e62d7.png)
+
+
+import numpy as np
+from PIL import Image
+import matplotlib.pyplot as plt
+def printPattern(n):
+
+    arraySize = n * 2 - 1;
+    result = [[0 for x in range(arraySize)]
+                 for y in range(arraySize)];
+         
+    # Fill the values
+    for i in range(arraySize):
+        for j in range(arraySize):
+            if(abs(i - (arraySize // 2)) >
+               abs(j - (arraySize // 2))):
+                result[i][j] = abs(i - (arraySize // 2));
+            else:
+                result[i][j] = abs(j - (arraySize // 2));
+             
+    # Print the array
+    for i in range(arraySize):
+        for j in range(arraySize):
+            print(result[i][j], end = " ");
+        print("");
+ 
+# Driver Code
+n = 3;
+ 
+printPattern(n);
+w, h = n,n
+arraySize = np.zeros((h, w, 3))# dtype=np.uint8)
+arraySize[0:n, 0:n] = [255,0,0] # red patch in upper left
+#arraySize[0:n, 0:n] = [255, 0, 0]
+#arraySize[n:0,n:0] = [120,200,255]
+img = Image.fromarray(arraySize, 'RGB')
+plt.imshow(img)
+plt.show()
+#img.save('my.png')
+#img.show()
+
+
+OUTPUT
+
+![image](https://user-images.githubusercontent.com/97940767/181451145-50d3f376-baac-48d4-8e39-017a438fd9a2.png)
+
+import matplotlib.pyplot as plt
+       
+M =    ([2, 2, 2, 2, 2],  
+        [2, 1, 1, 1, 2],  
+        [2, 1, 0, 1, 2],  
+        [2, 1, 1, 1, 2],
+        [2, 2, 2, 2, 2])  
+plt.imshow(M,cmap='Blues')
+plt.show()
+
+OUTPUT
+
+![image](https://user-images.githubusercontent.com/97940767/181451374-96755805-6f22-4b52-828a-d2147aaca693.png)
+
+
