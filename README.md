@@ -733,51 +733,50 @@ OUTPUT<br>
 1)maximum
 
 
-import cv2
-import numpy as np
-import matplotlib.pyplot as plt
-img=cv2.imread('r1.jpg' )
-img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
-plt.imshow(img)
-plt.show()
-max_channels = np.amax([np.amax(img[:,:,0]), np.amax(img[:,:,1]),np.amax(img[:,:,2])])
+import cv2<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+img=cv2.imread('r1.jpg' )<br>
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)<br>
+plt.imshow(img)<br>
+plt.show()<br>
+max_channels = np.amax([np.amax(img[:,:,0]), np.amax(img[:,:,1]),np.amax(img[:,:,2])])<br>
 
-print(max_channels)
+print(max_channels)<br>
 
-output
+output<br>
 
-![image](https://user-images.githubusercontent.com/97940767/181231478-d351b176-cb25-4cb3-b052-5fc9828a0e48.png)
+![image](https://user-images.githubusercontent.com/97940767/181231478-d351b176-cb25-4cb3-b052-5fc9828a0e48.png)<br>
 
-
+<br>
 MINIMUM
 
-import imageio
-import numpy as np
-import matplotlib.pyplot as plt
-img=imageio.imread('r1.jpg' )
-plt.imshow(img)
-plt.show()
-min_channels = np.amin([np.min(img[:,:,0]), np.amin(img[:,:,1]),np.amin(img[:,:,2])])
+import imageio<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+img=imageio.imread('r1.jpg' )<br>
+plt.imshow(img)<br>
+plt.show()<br>
+min_channels = np.amin([np.min(img[:,:,0]), np.amin(img[:,:,1]),np.amin(img[:,:,2])])<br>
 
-print(min_channels)
+print(min_channels)<br>
 
-OUTPUT
+OUTPUT<br>
 
-![image](https://user-images.githubusercontent.com/97940767/181231660-a69f6a51-6908-40f5-8651-a42868888ce6.png)
+![image](https://user-images.githubusercontent.com/97940767/181231660-a69f6a51-6908-40f5-8651-a42868888ce6.png)<br>
 
 
-AVERAGE
+AVERAGE<br>
 
-import cv2
-import matplotlib.pyplot as plt
-import numpy as np
-img=cv2.imread('r1.jpg')
-img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
-plt.imshow(img)
-np.average(img)
+import cv2<br>
+import matplotlib.pyplot as plt<br>
+import numpy as np<br>
+img=cv2.imread('r1.jpg')<br>
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)<br>
+plt.imshow(img)<br>
+np.average(img)<br>
 
-OUTPUT
-
+OUTPUT<br>
 ![image](https://user-images.githubusercontent.com/97940767/181231889-c4c7c404-9673-4271-84c4-8256928a51f1.png)
 
 STANDARD DEVIATION
