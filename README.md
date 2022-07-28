@@ -779,15 +779,15 @@ np.average(img)<br>
 OUTPUT<br>
 ![image](https://user-images.githubusercontent.com/97940767/181231889-c4c7c404-9673-4271-84c4-8256928a51f1.png)
 
-STANDARD DEVIATION
+STANDARD DEVIATION<br>
 
-from PIL import Image,ImageStat
-import matplotlib.pyplot as plt
-im=Image.open('r1.jpg')
-plt.imshow(im)
-plt.show()
-stat=ImageStat.Stat(im)
-print(stat.stddev)
+from PIL import Image,ImageStat<br>
+import matplotlib.pyplot as plt<br>
+im=Image.open('r1.jpg')<br>
+plt.imshow(im)<br>
+plt.show()<br>
+stat=ImageStat.Stat(im)<br>
+print(stat.stddev)<br>
 
 OUTPUT
 
@@ -795,98 +795,98 @@ OUTPUT
 
 
 
-# Python3 program for printing
-# the rectangular pattern
+#  Python3 program for printing<br>
+# the rectangular pattern<br>
+ <br>
+# Function to print the pattern<br>
+def printPattern(n):<br>
  
-# Function to print the pattern
-def printPattern(n):
- 
-    arraySize = n * 2 - 1;
-    result = [[0 for x in range(arraySize)]
-                 for y in range(arraySize)];
+    arraySize = n * 2 - 1;<br>
+    result = [[0 for x in range(arraySize)]<br>
+                 for y in range(arraySize)];<br>
          
-    # Fill the values
-    for i in range(arraySize):
-        for j in range(arraySize):
-            if(abs(i - (arraySize // 2)) >
-               abs(j - (arraySize // 2))):
-                result[i][j] = abs(i - (arraySize // 2));
-            else:
-                result[i][j] = abs(j - (arraySize // 2));
+    # Fill the values<br>
+    for i in range(arraySize):<br>
+        for j in range(arraySize):<br>
+            if(abs(i - (arraySize // 2)) ><br>
+               abs(j - (arraySize // 2))):<br>
+                result[i][j] = abs(i - (arraySize // 2));<br>
+            else:<br>
+                result[i][j] = abs(j - (arraySize // 2));<br>
              
-    # Print the array
-    for i in range(arraySize):
-        for j in range(arraySize):
-            print(result[i][j], end = " ");
+    # Print the array<br>
+    for i in range(arraySize):<br>
+        for j in range(arraySize):<br>
+            print(result[i][j], end = " ");<br>
         print("");
  
-# Driver Code
-n = 4;
+# Driver Code<br><br>
+n = 4;<br><br>
  
-printPattern(n);
+printPattern(n);<br><br>
 
 
-OUTPUT
+OUTPUT<br>
 
-![image](https://user-images.githubusercontent.com/97940767/181450782-bf66735d-3647-4541-96bd-c961391e62d7.png)
+![image](https://user-images.githubusercontent.com/97940767/181450782-bf66735d-3647-4541-96bd-c961391e62d7.png)<br>
 
 
-import numpy as np
-from PIL import Image
-import matplotlib.pyplot as plt
-def printPattern(n):
+import numpy as np<br>
+from PIL import Image<br>
+import matplotlib.pyplot as plt<br>
+def printPattern(n):<br>
 
-    arraySize = n * 2 - 1;
-    result = [[0 for x in range(arraySize)]
-                 for y in range(arraySize)];
+    arraySize = n * 2 - 1;<br>
+    result = [[0 for x in range(arraySize)]<br>
+                 for y in range(arraySize)];<br>
          
-    # Fill the values
-    for i in range(arraySize):
-        for j in range(arraySize):
-            if(abs(i - (arraySize // 2)) >
-               abs(j - (arraySize // 2))):
-                result[i][j] = abs(i - (arraySize // 2));
-            else:
-                result[i][j] = abs(j - (arraySize // 2));
+    # Fill the values<br>
+    for i in range(arraySize):<br>
+        for j in range(arraySize):<br>
+            if(abs(i - (arraySize // 2)) ><br>
+               abs(j - (arraySize // 2))):<br>
+                result[i][j] = abs(i - (arraySize // 2));<br>
+            else:<br>
+                result[i][j] = abs(j - (arraySize // 2));<br>
              
-    # Print the array
-    for i in range(arraySize):
-        for j in range(arraySize):
-            print(result[i][j], end = " ");
-        print("");
+    # Print the array<br>
+    for i in range(arraySize):<br>
+        for j in range(arraySize):<br>
+            print(result[i][j], end = " ");<br>
+        print("");<br>
  
-# Driver Code
-n = 3;
+# Driver Code<br>
+n = 3;<br>
  
-printPattern(n);
-w, h = n,n
-arraySize = np.zeros((h, w, 3))# dtype=np.uint8)
-arraySize[0:n, 0:n] = [255,0,0] # red patch in upper left
-#arraySize[0:n, 0:n] = [255, 0, 0]
-#arraySize[n:0,n:0] = [120,200,255]
-img = Image.fromarray(arraySize, 'RGB')
-plt.imshow(img)
-plt.show()
-#img.save('my.png')
-#img.show()
+printPattern(n);<br>
+w, h = n,n<br>
+arraySize = np.zeros((h, w, 3))# dtype=np.uint8)<br>
+arraySize[0:n, 0:n] = [255,0,0] # red patch in upper left<br>
+#arraySize[0:n, 0:n] = [255, 0, 0]<br>
+#arraySize[n:0,n:0] = [120,200,255]<br>
+img = Image.fromarray(arraySize, 'RGB')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+#img.save('my.png')<br>
+#img.show()<br>
 
 
-OUTPUT
+OUTPUT<br>
 
-![image](https://user-images.githubusercontent.com/97940767/181451145-50d3f376-baac-48d4-8e39-017a438fd9a2.png)
+![image](https://user-images.githubusercontent.com/97940767/181451145-50d3f376-baac-48d4-8e39-017a438fd9a2.png)<br>
 
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt<br>
        
-M =    ([2, 2, 2, 2, 2],  
-        [2, 1, 1, 1, 2],  
-        [2, 1, 0, 1, 2],  
-        [2, 1, 1, 1, 2],
-        [2, 2, 2, 2, 2])  
-plt.imshow(M,cmap='Blues')
-plt.show()
+M =    ([2, 2, 2, 2, 2],<br>  
+        [2, 1, 1, 1, 2],<br>  
+        [2, 1, 0, 1, 2],<br>  
+        [2, 1, 1, 1, 2],<br>
+        [2, 2, 2, 2, 2])<br>  
+plt.imshow(M,cmap='Blues')<br>
+plt.show()<br>
 
-OUTPUT
+OUTPUT<br>
 
-![image](https://user-images.githubusercontent.com/97940767/181451374-96755805-6f22-4b52-828a-d2147aaca693.png)
+![image](https://user-images.githubusercontent.com/97940767/181451374-96755805-6f22-4b52-828a-d2147aaca693.png)<br>
 
 
