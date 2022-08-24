@@ -889,4 +889,77 @@ OUTPUT<br>
 
 ![image](https://user-images.githubusercontent.com/97940767/181451374-96755805-6f22-4b52-828a-d2147aaca693.png)<br>
 
+MINIMUM
+
+import imageio<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+img=imageio.imread('r1.jpg' )<br>
+plt.imshow(img)<br>
+plt.show()<br>
+min_channels = np.amin([np.min(img[:,:,0]), np.amin(img[:,:,1]),np.amin(img[:,:,2])])<br>
+
+print(min_channels)<br>
+
+OUTPUT
+
+![image](https://user-images.githubusercontent.com/97940767/186384659-53a78406-e0ac-44a8-bbb5-6774f40a39ce.png)<br>
+
+
+MAXIMUM
+
+import cv2<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+img=cv2.imread('r1.jpg' )<br>
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)<br>
+plt.imshow(img)<br>
+plt.show()<br>
+max_channels = np.amax([np.amax(img[:,:,0]), np.amax(img[:,:,1]),np.amax(img[:,:,2])])<br>
+
+print(max_channels)<br>
+
+OUTPUT
+
+![image](https://user-images.githubusercontent.com/97940767/186385225-9fd66a0e-0647-4603-a15b-84bf4c5f101e.png)
+
+
+MEAN MEDIUM STANDARD DEVIATION
+
+from PIL import Image,ImageStat<br>
+import matplotlib.pyplot as plt<br>
+im=Image.open('r1.jpg')<br>
+plt.imshow(im)<br>
+plt.show()<br>
+stat=ImageStat.Stat(im)<br>
+print(stat.stddev)<br>
+
+OUTPUT
+
+![image](https://user-images.githubusercontent.com/97940767/186385868-bab00c60-c8bc-4fa5-a1ac-f2f06d58afd6.png)
+
+
+AVERAGE
+
+import cv2<br>
+import matplotlib.pyplot as plt<br>
+import numpy as np<br>
+img=cv2.imread('r1.jpg')<br>
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)<br>
+plt.imshow(img)<br>
+np.average(img)<br>
+
+OUTPUT
+
+![image](https://user-images.githubusercontent.com/97940767/186386370-16faac91-d10a-4d8c-b4b2-8d0bef78c25e.png)<br>
+
+
+
+
+
+
+
+
+
+
 
