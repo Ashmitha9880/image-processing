@@ -949,14 +949,46 @@ img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)<br>
 plt.imshow(img)<br>
 np.average(img)<br>
 
-OUTPUT
+OUTPUT<br>
 
 ![image](https://user-images.githubusercontent.com/97940767/186386370-16faac91-d10a-4d8c-b4b2-8d0bef78c25e.png)<br>
 
 
+import cv2<br>
+# Read the original image<br>
+img = cv2.imread('a1.jpg')<br>
+# Display original image<br>
+cv2.imshow('Original', img)<br>
+cv2.waitKey(0)<br>
+# Convert to graycsale<br>
+img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)<br>
+# Blur the image for better edge detection<br>
+img_blur = cv2.GaussianBlur(img_gray, (3,3), 0)<br>
+# Sobel Edge Detection<br>
+sobelx = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=0, ksize=5) # Sobel Edge Detection on the X axis<br>
+sobely = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=0, dy=1, ksize=5) # Sobel Edge Detection on the Y axis<br>
+sobelxy = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=1, ksize=5) # Combined X and Y Sobel Edge Detection<br>
+# Display Sobel Edge Detection Images<br>
+cv2.imshow('Sobel X', sobelx)<br>
+cv2.waitKey(0)<br>
+cv2.imshow('Sobel Y', sobely)<br>
+cv2.waitKey(0)<br>
+cv2.imshow('Sobel X Y using Sobel() function', sobelxy)<br>
+cv2.waitKey(0)<br>
+# Canny Edge Detection<br>
+edges = cv2.Canny(image=img_blur, threshold1=100, threshold2=200) # Canny Edge Detection<br>
+# Display Canny Edge Detection Image<br>
+cv2.imshow('Canny Edge Detection', edges)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
 
+OUTPUT<br>
 
-
+![image](https://user-images.githubusercontent.com/97940767/186404662-e61a42d9-73e7-4233-bf9f-b22c63b23f48.png)<br>
+![image](https://user-images.githubusercontent.com/97940767/186404698-c8bd89d9-a8b7-402b-ba42-2ae04caa6e1c.png)<br>
+![image](https://user-images.githubusercontent.com/97940767/186404742-7446316c-f00a-4f73-aa13-136a65bf5fab.png)<br>
+![image](https://user-images.githubusercontent.com/97940767/186404788-662a32ef-c5a2-4dfe-a317-d5bdf7c38bc0.png)<br>
+![image](https://user-images.githubusercontent.com/97940767/186404834-79316f1a-cf74-48b4-b5e9-d894eb457b25.png)<br>
 
 
 
