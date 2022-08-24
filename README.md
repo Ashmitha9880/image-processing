@@ -511,7 +511,7 @@ plt.show()<br>
 
 ![image](https://user-images.githubusercontent.com/97940767/178708416-2124ab67-4013-4510-8b1a-72283ea898fb.png)<br>
 
-22) ANALYSE THE IMAGE DATA USING HISTOGRAM
+#22) ANALYSE THE IMAGE DATA USING HISTOGRAM
 
 import numpy as np<br>
 import cv2 as cv<br>
@@ -889,7 +889,7 @@ OUTPUT<br>
 
 ![image](https://user-images.githubusercontent.com/97940767/181451374-96755805-6f22-4b52-828a-d2147aaca693.png)<br>
 
-MINIMUM
+#MINIMUM
 
 import imageio<br>
 import numpy as np<br>
@@ -906,7 +906,7 @@ OUTPUT
 ![image](https://user-images.githubusercontent.com/97940767/186384659-53a78406-e0ac-44a8-bbb5-6774f40a39ce.png)<br>
 
 
-MAXIMUM
+#MAXIMUM
 
 import cv2<br>
 import numpy as np<br>
@@ -924,7 +924,7 @@ OUTPUT
 ![image](https://user-images.githubusercontent.com/97940767/186385225-9fd66a0e-0647-4603-a15b-84bf4c5f101e.png)
 
 
-MEAN MEDIUM STANDARD DEVIATION
+#MEAN MEDIUM STANDARD DEVIATION
 
 from PIL import Image,ImageStat<br>
 import matplotlib.pyplot as plt<br>
@@ -939,7 +939,7 @@ OUTPUT
 ![image](https://user-images.githubusercontent.com/97940767/186385868-bab00c60-c8bc-4fa5-a1ac-f2f06d58afd6.png)
 
 
-AVERAGE
+#AVERAGE
 
 import cv2<br>
 import matplotlib.pyplot as plt<br>
