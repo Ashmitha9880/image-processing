@@ -991,7 +991,7 @@ OUTPUT<br>
 ![image](https://user-images.githubusercontent.com/97940767/186404834-79316f1a-cf74-48b4-b5e9-d894eb457b25.png)<br>
 
 
-
+USING PILLOW FUNCTIONS
 
 
 
