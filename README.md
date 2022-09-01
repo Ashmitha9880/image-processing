@@ -1406,9 +1406,6 @@ OUTPUT<br>
 
 
 
-
-
-
 #Roberts Edge Detection- Roberts cross operator<br>
 import cv2<br>
 import numpy as np<br>
@@ -1428,3 +1425,6 @@ cv2.imwrite("output.jpg",edged_img)<br>
 cv2.imshow("OutputImage", edged_img)<br>
 cv2.waitKey()<br>
 cv2.destroyAllWindows()<br>
+
+OUTPUT<br>
+![image](https://user-images.githubusercontent.com/97940767/187903608-9ce3833a-f608-4374-8c4d-ca9c740c3391.png)
