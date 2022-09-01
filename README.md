@@ -1280,52 +1280,146 @@ print('Dices dots number: {}.'.format(len (dots_contours)))<br>
 ![image](https://user-images.githubusercontent.com/97940767/187879190-7ca8e097-5b2d-440e-b7f4-4ac6baeb54b4.png)<br>
 
 
-from skimage.segmentation import slic
-from skimage.color import label2rgb
-import matplotlib.pyplot as plt
-import numpy as np
-face_image = plt.imread('face.jpg')
-segments = slic(face_image, n_segments=400)
-segmented_image=label2rgb(segments,face_image,kind='avg')
-plt.imshow(face_image)
+from skimage.segmentation import slic<br>
+from skimage.color import label2rgb<br>
+import matplotlib.pyplot as plt<br>
+import numpy as np<br>
+face_image = plt.imread('face.jpg')<br>
+segments = slic(face_image, n_segments=400)<br>
+segmented_image=label2rgb(segments,face_image,kind='avg')<br>
+plt.imshow(face_image)<br>
+plt.show()<br>
+plt.imshow((segmented_image * 1).astype(np.uint8))<br>
+plt.show()<br>
+
+OUTPUT<br>
+
+![image](https://user-images.githubusercontent.com/97940767/187898232-c23bebab-233f-4fe0-8dab-213a14c39877.png)<br>
+
+
+# EDGE DETECTION<br>
+
+#Canny Edge detection<br>
+import cv2<br>
+import numpy as np <br>
+import matplotlib.pyplot as plt<br>
+plt.style.use('seaborn')<br>
+<br>
+loaded_image = cv2.imread("j1.jpeg")<br>
+loaded_image = cv2.cvtColor(loaded_image,cv2.COLOR_BGR2RGB)<br>
+
+gray_image = cv2.cvtColor(loaded_image,cv2.COLOR_BGR2GRAY)<br>
+
+edged_image = cv2.Canny(gray_image, threshold1=30, threshold2=100)<br>
+
+plt.figure(figsize=(20,20))<br>
+plt.subplot(1,3,1)<br>
+plt.imshow(loaded_image, cmap="gray")<br>
+plt.title("original Image")<br>
+plt.axis("off")<br>
+plt.subplot(1,3,2)<br>
+plt.imshow(gray_image,cmap="gray")<br>
+plt.axis("off")<br>
+plt.title("Grayscale Image")<br>
+plt.subplot(1,3,3)<br>
+plt.imshow(edged_image, cmap="gray")<br>
+plt.axis("off")<br>
+plt.title("Canny Edge Detected Image")<br>
 plt.show()
-plt.imshow((segmented_image * 1).astype(np.uint8))
-plt.show()
+
+OUTPUT<br>
+
+
+
+
+
+import cv2<br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+
+img=cv2.imread('j1.jpeg',)<br>
+
+#converting to gray scale <br>
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)<br>
+
+# remove noise<br>
+img= cv2.GaussianBlur (gray, (3,3),0)<br>
+
+#convolute with proper kernels<br>
+laplacian = cv2.Laplacian (img,cv2.CV_64F)<br>
+sobelx = cv2.Sobel (img,cv2.CV_64F,1,0,ksize=5) #x <br>
+sobely = cv2.Sobel (img,cv2.CV_64F,0,1,ksize=5) #y<br>
+
+plt.subplot(2,2,1),<br>
+plt.imshow(img, cmap = 'gray')<br>
+plt.title("original"), <br>
+plt.xticks([]),<br>
+plt.yticks([]) <br>
+plt.subplot(2,2,2)<br>, 
+plt.imshow(laplacian, cmap = 'gray')<br>
+plt.title('Laplacian'), <br>
+plt.xticks([]),<br>
+plt.yticks([])<br>
+plt.subplot(2,2,3), <br>
+plt.imshow(sobelx,cmap = 'gray')<br>
+plt.title('Sobel x'), <br>
+plt.xticks([]),<br>
+plt.yticks([])<br>
+plt.subplot(2,2,4),<br>
+plt.imshow(sobely, cmap = 'gray')<br>
+plt.title('Sobel Y')<br>,
+plt.xticks([]), plt.yticks([])<br>
+
+plt.show()<br>
+
 
 OUTPUT
 
-![image](https://user-images.githubusercontent.com/97940767/187898232-c23bebab-233f-4fe0-8dab-213a14c39877.png)
+
+#Edge detection using Prewitt operator<br>
+import cv2<br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+img = cv2.imread('j1.jpeg')<br>
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)<br>
+img_gaussian = cv2.GaussianBlur (gray, (3,3),0)<br>
+
+#prewitt<br>
+kernelx= np.array([[1,1,1], [0,0,0], [-1,-1,-1]])<br>
+kernely = np.array([[-1,0,1],[-1,0,1],[-1,0,1]]) <br>
+img_prewittx = cv2.filter2D(img_gaussian, -1, kernelx)<br>
+img_prewitty = cv2.filter2D(img_gaussian, -1, kernely)<br>
+
+cv2.imshow("Original Image", img)<br>
+cv2.imshow("Prewitt x", img_prewittx)<br>
+cv2.imshow("Prewitt y", img_prewitty)<br>
+cv2.waitKey()<br>
+cv2.imshow("Prewitt", img_prewittx + img_prewitty)<br>
+cv2.destroyAllWindows()<br>
+
+OUTPUT<br>
 
 
-# EDGE DETECTION
 
-#Canny Edge detection
-import cv2
-import numpy as np 
-import matplotlib.pyplot as plt
-plt.style.use('seaborn')
 
-loaded_image = cv2.imread("j1.jpeg")
-loaded_image = cv2.cvtColor(loaded_image,cv2.COLOR_BGR2RGB)
 
-gray_image = cv2.cvtColor(loaded_image,cv2.COLOR_BGR2GRAY)
 
-edged_image = cv2.Canny(gray_image, threshold1=30, threshold2=100)
-
-plt.figure(figsize=(20,20))
-plt.subplot(1,3,1)
-plt.imshow(loaded_image, cmap="gray")
-plt.title("original Image")
-plt.axis("off")
-plt.subplot(1,3,2)
-plt.imshow(gray_image,cmap="gray")
-plt.axis("off")
-plt.title("Grayscale Image")
-plt.subplot(1,3,3)
-plt.imshow(edged_image, cmap="gray")
-plt.axis("off")
-plt.title("Canny Edge Detected Image")
-plt.show()
-
-OUTPUT
-
+#Roberts Edge Detection- Roberts cross operator<br>
+import cv2<br>
+import numpy as np<br>
+from scipy import ndimage<br>
+from matplotlib import pyplot as plt <br>
+roberts_cross_v = np.array([[1, 0 ],<br>
+                            [0,-1]])<br>
+roberts_cross_h= np.array([[0, 1], <br>
+                           [-1, 0]] )<br>
+img = cv2.imread("j1.jpeg",0).astype('float64')<br>
+img/=255.0 <br>
+vertical= ndimage.convolve( img, roberts_cross_v)<br> 
+horizontal = ndimage.convolve( img, roberts_cross_h)<br>
+edged_img = np.sqrt( np.square (horizontal) + np.square (vertical))<br>
+edged_img*=255<br>
+cv2.imwrite("output.jpg",edged_img)<br>
+cv2.imshow("OutputImage", edged_img)<br>
+cv2.waitKey()<br>
+cv2.destroyAllWindows()<br>
