@@ -1243,19 +1243,19 @@ from skimage.filters import threshold_otsu<br>
 
 image_dices = imread('diceimg.png')<br>
 
-# Make the image grayscale<br>
+#Make the image grayscale<br>
 image_dices = color.rgb2gray(image_dices)<br>
 
 #Obtain the optimal thresh value <br>
 thresh = threshold_otsu(image_dices)<br>
 
-# Apply thresholding<br>
+#Apply thresholding<br>
 binary=image_dices > thresh<br>
 
-# Find contours at a constant value of 0.8<br>
+#Find contours at a constant value of 0.8<br>
 contours = measure.find_contours (binary, level=0.8)<br>
 
-# Show the image<br>
+#Show the image<br>
 show_image_contour (image_dices, contours)<br>
 
 ![image](https://user-images.githubusercontent.com/97940767/187879003-4a6ab850-9330-44c4-ae34-ebbf9489b2b7.png)<br>
