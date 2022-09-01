@@ -1297,7 +1297,7 @@ OUTPUT<br>
 ![image](https://user-images.githubusercontent.com/97940767/187898232-c23bebab-233f-4fe0-8dab-213a14c39877.png)<br>
 
 
-#EDGE DETECTION<br>
+# EDGE DETECTION<br>
 
 #Canny Edge detection<br>
 import cv2<br>
@@ -1343,7 +1343,7 @@ img=cv2.imread('j1.jpeg',)<br>
 #converting to gray scale <br>
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)<br>
 
-# remove noise<br>
+#remove noise<br>
 img= cv2.GaussianBlur (gray, (3,3),0)<br>
 
 #convolute with proper kernels<br>
