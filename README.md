@@ -1090,3 +1090,99 @@ filled_edge<br>
 edge.save('processed.png')<br>
 
 
+
+
+image restoration<br>
+
+
+import numpy as np<br>
+import cv2<br>
+import matplotlib.pyplot as plt<br>
+#Open the image.<br>
+img= cv2.imread('dimage_damaged.png')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+#Load the mask.<br>
+mask= cv2.imread('dimage_mask.png', 0)<br>
+plt.imshow(mask)<br>
+plt.show()<br>
+# Inpaint.<br>
+dst = cv2.inpaint (img, mask, 3, cv2.INPAINT_TELEA)<br>
+# write the output.<br>
+cv2.imwrite('dimaged_inpainted.png', dst)<br>
+plt.imshow(dst)<br>
+plt.show()<br>
+
+
+OUTPUT<br>
+
+![image](https://user-images.githubusercontent.com/97940767/187874939-2efaf180-f505-40a4-bae3-d4f8b9ca3d88.png)<br>
+![image](https://user-images.githubusercontent.com/97940767/187875009-8b5d632d-2814-4b54-a5b8-fdc2ea237599.png)<br>
+
+
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+import pandas as pd<br>
+plt.rcParams['figure.figsize'] = (10, 8)<br>
+
+
+
+def show_image(image, title='Image', cmap_type='gray'):<br>
+    plt.imshow(image, cmap=cmap_type)<br>
+    plt.title(title)<br>
+    plt.axis('off') <br>
+    
+def plot_comparison (img_original, img_filtered, img_title_filtered):<br>
+    fig, (ax1, ax2) = plt.subplots(ncols=2, figsize=(10, 8), sharex=True, sharey=True)<br>
+    ax1.imshow(img_original, cmap=plt.cm.gray)<br>
+    ax1.set_title('Original')<br>
+    ax1.axis('off')<br>
+    ax2.imshow(img_filtered, cmap=plt.cm.gray)<br>
+    ax2.set_title(img_title_filtered)<br>
+    ax2.axis('off')<br>
+    
+    
+    from skimage.restoration import inpaint<br>
+from skimage.transform import resize<br>
+from skimage import color<br>
+
+
+
+
+image_with_logo = plt.imread('imlogo.png')<br>
+
+#Initialize the mask<br>
+mask = np.zeros(image_with_logo.shape[:-1])<br>
+
+# Set the pixels where the Logo is to 1 <br>
+mask[210:272, 360:425] = 1<br>
+<br>
+# Apply inpainting to remove the Logo<br>
+image_logo_removed = inpaint.inpaint_biharmonic(image_with_logo,<br>
+                                             mask,<br>
+                                             multichannel=True)<br>
+
+#Show the original and Logo removed images<br>
+plot_comparison (image_with_logo, image_logo_removed, 'Image with logo removed')<br>
+
+
+OUTPUT<br><br>
+
+![image](https://user-images.githubusercontent.com/97940767/187875861-1f0db53c-f00e-4a73-8a88-ac8c4fecc720.png)<br>
+
+
+
+from skimage.util import random_noise<br>
+
+fruit_image= plt.imread('fruitts.jpeg')<br><br>
+
+#Add noise to the image<br>
+noisy_image = random_noise (fruit_image)<br>
+
+#Show th original and resulting image <br>
+plot_comparison (fruit_image, noisy_image, 'Noisy image')<br>
+
+OUTPUT<br>
+
+![image](https://user-images.githubusercontent.com/97940767/187876704-a0d76608-1eef-405d-bbc3-7200830caf0c.png)<br>
+
