@@ -1400,6 +1400,9 @@ cv2.imshow("Prewitt", img_prewittx + img_prewitty)<br>
 cv2.destroyAllWindows()<br>
 
 OUTPUT<br>
+![image](https://user-images.githubusercontent.com/97940767/187903056-50803b2a-ab32-4b56-9695-69a0972a8e4a.png)
+![image](https://user-images.githubusercontent.com/97940767/187903198-1f6f483a-8704-4d7f-97c6-2334d3b9ace5.png)
+![image](https://user-images.githubusercontent.com/97940767/187903346-9140c870-4d85-4196-aa3f-6f1551449364.png)
 
 
 
