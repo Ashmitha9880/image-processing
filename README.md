@@ -1280,3 +1280,52 @@ print('Dices dots number: {}.'.format(len (dots_contours)))<br>
 ![image](https://user-images.githubusercontent.com/97940767/187879190-7ca8e097-5b2d-440e-b7f4-4ac6baeb54b4.png)<br>
 
 
+from skimage.segmentation import slic
+from skimage.color import label2rgb
+import matplotlib.pyplot as plt
+import numpy as np
+face_image = plt.imread('face.jpg')
+segments = slic(face_image, n_segments=400)
+segmented_image=label2rgb(segments,face_image,kind='avg')
+plt.imshow(face_image)
+plt.show()
+plt.imshow((segmented_image * 1).astype(np.uint8))
+plt.show()
+
+OUTPUT
+
+![image](https://user-images.githubusercontent.com/97940767/187898232-c23bebab-233f-4fe0-8dab-213a14c39877.png)
+
+
+# EDGE DETECTION
+
+#Canny Edge detection
+import cv2
+import numpy as np 
+import matplotlib.pyplot as plt
+plt.style.use('seaborn')
+
+loaded_image = cv2.imread("j1.jpeg")
+loaded_image = cv2.cvtColor(loaded_image,cv2.COLOR_BGR2RGB)
+
+gray_image = cv2.cvtColor(loaded_image,cv2.COLOR_BGR2GRAY)
+
+edged_image = cv2.Canny(gray_image, threshold1=30, threshold2=100)
+
+plt.figure(figsize=(20,20))
+plt.subplot(1,3,1)
+plt.imshow(loaded_image, cmap="gray")
+plt.title("original Image")
+plt.axis("off")
+plt.subplot(1,3,2)
+plt.imshow(gray_image,cmap="gray")
+plt.axis("off")
+plt.title("Grayscale Image")
+plt.subplot(1,3,3)
+plt.imshow(edged_image, cmap="gray")
+plt.axis("off")
+plt.title("Canny Edge Detected Image")
+plt.show()
+
+OUTPUT
+
