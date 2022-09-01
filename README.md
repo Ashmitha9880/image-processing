@@ -1187,4 +1187,96 @@ OUTPUT<br>
 ![image](https://user-images.githubusercontent.com/97940767/187876704-a0d76608-1eef-405d-bbc3-7200830caf0c.png)<br>
 
 
+from skimage.restoration import denoise_tv_chambolle<br>
+
+noisy_image = plt.imread('noisy.jpg')<br>
+
+# Apply total variation filter denoising <br>
+denoised_image = denoise_tv_chambolle (noisy_image, multichannel=True)<br>
+
+#Show the noisy and denoised image<br>
+plot_comparison (noisy_image, denoised_image, 'Denoised Image')<br>
+
+
+![image](https://user-images.githubusercontent.com/97940767/187878141-f1d7343c-ed8f-45ce-8e2d-994139bfb233.png)<br>
+
+
+
+from skimage.restoration import denoise_bilateral<br>
+landscape_image = plt.imread('noisy.jpg')<br>
+#Apply bilateral filter denoising<br>
+denoised_image = denoise_bilateral (landscape_image, multichannel=True)<br>
+#Show original and resulting images<br>
+plot_comparison (landscape_image, denoised_image, 'Denoised Image')<br>
+
+
+OUTPUT<br>
+
+![image](https://user-images.githubusercontent.com/97940767/187878683-a77a6822-92ae-4cca-a229-cc9f39ae13fb.png)<br>
+
+
+def show_image_contour (image, contours): <br>
+    plt.figure()<br>
+    for n, contour in enumerate(contours):<br>
+        plt.plot(contour[:, 1], contour[:, 0], linewidth=3)<br>
+    plt.imshow(image, interpolation='nearest', cmap='gray_r')<br>
+    plt.title('Contours')<br>
+    plt.axis('off')<br>
+    
+    <br>
+    from skimage import measure, data<br>
+
+#Obtain the horse image<br>
+horse_image = data.horse()<br>
+
+#Find the contours with a constant Level value of 0.8 <br>
+contours = measure.find_contours (horse_image, level=0.8)<br>
+
+#Shows the image with contours found <br>
+show_image_contour (horse_image, contours)<br>
+
+![image](https://user-images.githubusercontent.com/97940767/187878928-44bb84cf-451d-4d65-b49a-3911b11c8016.png)<br>
+
+
+from skimage.io import imread <br>
+from skimage.filters import threshold_otsu<br>
+
+image_dices = imread('diceimg.png')<br>
+
+# Make the image grayscale<br>
+image_dices = color.rgb2gray(image_dices)<br>
+
+#Obtain the optimal thresh value <br>
+thresh = threshold_otsu(image_dices)<br>
+
+# Apply thresholding<br>
+binary=image_dices > thresh<br>
+
+# Find contours at a constant value of 0.8<br>
+contours = measure.find_contours (binary, level=0.8)<br>
+
+# Show the image<br>
+show_image_contour (image_dices, contours)<br>
+
+![image](https://user-images.githubusercontent.com/97940767/187879003-4a6ab850-9330-44c4-ae34-ebbf9489b2b7.png)<br>
+
+
+# Create List with the shape of each contour <br>
+shape_contours = [cnt.shape[0] for cnt in contours]<br>
+
+#Set 50 as the maximum size of the dots shape <br>
+max_dots_shape = 50<br><br>
+
+#Count dots in contours excluding bigger than dots size <br>
+dots_contours = [cnt for cnt in contours if np.shape(cnt) [0] < max_dots_shape]<br>
+
+#Shows all contours found <br>
+show_image_contour (binary, contours)<br>
+
+#Print the dice's number<br>
+print('Dices dots number: {}.'.format(len (dots_contours)))<br>
+
+
+![image](https://user-images.githubusercontent.com/97940767/187879190-7ca8e097-5b2d-440e-b7f4-4ac6baeb54b4.png)<br>
+
 
