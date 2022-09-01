@@ -1297,7 +1297,7 @@ OUTPUT<br>
 ![image](https://user-images.githubusercontent.com/97940767/187898232-c23bebab-233f-4fe0-8dab-213a14c39877.png)<br>
 
 
-# EDGE DETECTION<br>
+#EDGE DETECTION<br>
 
 #Canny Edge detection<br>
 import cv2<br>
@@ -1329,6 +1329,7 @@ plt.show()
 
 OUTPUT<br>
 
+![image](https://user-images.githubusercontent.com/97940767/187902575-81effe86-16f4-4ccc-8d58-742e70f9c50c.png)
 
 
 
@@ -1374,6 +1375,7 @@ plt.show()<br>
 
 
 OUTPUT
+![image](https://user-images.githubusercontent.com/97940767/187902795-011d67fe-48d1-4eef-ab31-0c8d79eac891.png)
 
 
 #Edge detection using Prewitt operator<br>
