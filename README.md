@@ -1428,3 +1428,43 @@ cv2.destroyAllWindows()<br>
 
 OUTPUT<br>
 ![image](https://user-images.githubusercontent.com/97940767/187903608-9ce3833a-f608-4374-8c4d-ca9c740c3391.png)
+24. Write a program for feature extraction from image
+#Importing the required libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+from skimage.io import imread, imshow
+#Loading the image
+image1 = imread('C:/Users/Desktop/jumbo.jpg')
+imshow(image1);
+output:
+
+#Converting the original image to gray
+image2 = imread('jumbo.jpg', as_gray=True)
+imshow(image2);
+Output:
+
+#Analyzing both the images
+#Shape of images
+
+print(image1.shape)
+print(image2.shape)
+output:
+
+#size of the images
+print(image1.size)
+print(image2.size)
+output:
+
+#Feature Extraction
+#i. Pixel Features
+The number of pixels in an image is the same as the size of the image for grayscale images we can find the pixel features by reshaping the shape of the image and returning the array form of the image.
+pixel_features1 = np.reshape(image2, (1600*1600))
+features.shape, pixel_features1
+Output:
+
+#pixel feature for the colored image
+pixel_features2 = np.reshape(image1, (1600*1600*3))
+features.shape, pixel_features2
+output:
